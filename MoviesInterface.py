@@ -84,7 +84,19 @@ def update_rating():
     Prompt user for a rating (integer).
     Append the rating to the movie's Ratings list in the database.
     """
-    print("updating rating")
+    try:
+        table = get_table()    
+        title = input("What is the movie title? ")
+        rating = int(input("What is the rating (integer): "))
+        table.update_item(
+            Key={"Title": title},
+            UpdateExpression="SET Ratings = list_append(Ratings, :r)",
+            ExpressionAttributeValues={':r': [rating]}
+        )
+        print("updating rating")
+
+    except Exception:
+        print("error in updating movie rating")
 
 def delete_movie():
     """
