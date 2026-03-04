@@ -1,7 +1,7 @@
 # name: Mikayla Froemming
-# date: 03/03/2026
+# date: 03/03/2026 (COMPLETED 03/03/2026)
 # description: Implementation of CRUD operations with DynamoDB — CS178 Lab 10
-# proposed score: 0 (out of 5) -- if I don't change this, I agree to get 0 points.
+# proposed score: 5 (out of 5) -- if I don't change this, I agree to get 0 points.
 
 import boto3
 from boto3.dynamodb.conditions import Key
